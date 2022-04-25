@@ -1,0 +1,30 @@
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Lista";
+}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Lista</h2>
+            <div class="">
+                <b>Pessoa ID</b>
+            </div>
+            <div class="">
+                @ViewData["PessoaId"]
+            </div>
+            <div class="">
+                <b>Nome</b>
+            </div>
+            <div class="">
+                @ViewData["PessoaName"]
+            </div>
+            <div class="">
+                <b>Tipo</b>
+            </div>
+            <div class="">
+                @ViewData["PessoaType"]
+            </div>
+            
+        </div>
+    </div>
+</div>
