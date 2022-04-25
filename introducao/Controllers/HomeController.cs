@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using introducao.Models;
+using Microsoft.AspNetCore.Http;
 
 
 namespace introducao.Controllers
@@ -32,11 +33,11 @@ namespace introducao.Controllers
         }
         
         [HttpPost]
-        public IActionResult Lista(int PessoaId, string PessoaName, string PessoaType)
+        public IActionResult Lista(Pessoa pessoa)
         {
-            ViewData["PessoaId"] = PessoaId;
-            ViewData["PessoaName"] = PessoaName;
-            ViewData["PessoaType"] = PessoaType;
+            ViewData["PessoaId"] = pessoa.PessoaId;
+            ViewData["PessoaName"] = pessoa.PessoaName;
+            ViewData["PessoaType"] = pessoa.PessoaName;
             
             return View();
         }
