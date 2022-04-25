@@ -22,11 +22,8 @@ namespace introducao.Controllers
                 PessoaName = "Breno",
                 PessoaType = "Estag"
             };
-            ViewData["PessoaId"] = pessoa.PessoaId;
-            ViewData["PessoaName"] = pessoa.PessoaName;
-            ViewData["PessoaType"] = pessoa.PessoaType;
-            ViewBag.id = pessoa.PessoaId;
-            return View();
+
+            return View(pessoa);
         }
 
         public IActionResult Contatos()

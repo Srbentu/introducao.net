@@ -1,4 +1,6 @@
-﻿@{
+﻿@model introducao.Models.Pessoa;
+
+@{
     ViewData["Title"] = "MVC";
 }
 
@@ -10,16 +12,7 @@
                 <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
                 <br/>
                 <p>
-                    @ViewData["PessoaId"]
-                </p>
-                <p>
-                    @ViewData["PessoaName"]
-                </p>
-                <p>
-                    @ViewData["PessoaType"]
-                </p>
-                <p>
-                    @ViewBag.id
+                    @Model.PessoaName
                 </p>
             </div>
         </div>
