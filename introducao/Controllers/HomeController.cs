@@ -17,5 +17,11 @@ namespace introducao.Controllers
         {
             return View();
         }
+
+        public IActionResult Contatos()
+        {
+            return View();
+        }
+        
     }
 }
