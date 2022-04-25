@@ -23,8 +23,9 @@ namespace introducao.Controllers
                 PessoaType = "Estag"
             };
             ViewData["PessoaId"] = pessoa.PessoaId;
-            ViewData["PessoaNme"] = pessoa.PessoaName;
+            ViewData["PessoaName"] = pessoa.PessoaName;
             ViewData["PessoaType"] = pessoa.PessoaType;
+            ViewBag.id = pessoa.PessoaId;
             return View();
         }
 
