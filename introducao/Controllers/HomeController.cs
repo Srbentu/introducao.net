@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using introducao.Models;
 
+
 namespace introducao.Controllers
 {
     public class HomeController : Controller
@@ -15,6 +16,15 @@ namespace introducao.Controllers
 
         public ActionResult Index()
         {
+            var pessoa = new Pessoa
+            {
+                PessoaId = 1,
+                PessoaName = "Breno",
+                PessoaType = "Estag"
+            };
+            ViewData["PessoaId"] = pessoa.PessoaId;
+            ViewData["PessoaNme"] = pessoa.PessoaName;
+            ViewData["PessoaType"] = pessoa.PessoaType;
             return View();
         }
 
