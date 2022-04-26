@@ -1,3 +1,5 @@
+@model introducao.Models.Pessoa;
+
 @{
     Layout = "_Layout";
     ViewData["Title"] = "Lista";
@@ -7,24 +9,24 @@
         <div class="col">
             <h2>Lista</h2>
             <div class="">
-                <b>Pessoa ID</b>
+                <b>@Html.LabelFor(x => x.PessoaId)</b>
             </div>
             <div class="">
-                @ViewData["PessoaId"]
+                @Model.PessoaId
             </div>
             <div class="">
-                <b>Nome</b>
+                <b>@Html.LabelFor(x => x.PessoaName)</b>
             </div>
             <div class="">
-                @ViewData["PessoaName"]
+                @Model.PessoaName
             </div>
             <div class="">
-                <b>Tipo</b>
+                <b>@Html.LabelFor(x => x.PessoaType)</b>
             </div>
             <div class="">
-                @ViewData["PessoaType"]
+                @Model.PessoaType
             </div>
-            
+            @Html.ActionLink("Voltar", "Index", "Home")
         </div>
     </div>
 </div>

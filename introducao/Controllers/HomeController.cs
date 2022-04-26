@@ -35,11 +35,8 @@ namespace introducao.Controllers
         [HttpPost]
         public IActionResult Lista(Pessoa pessoa)
         {
-            ViewData["PessoaId"] = pessoa.PessoaId;
-            ViewData["PessoaName"] = pessoa.PessoaName;
-            ViewData["PessoaType"] = pessoa.PessoaName;
             
-            return View();
+            return View(pessoa);
         }
         
     }
