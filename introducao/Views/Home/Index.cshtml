@@ -12,27 +12,30 @@
                 <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
                 <br/>
                 
-                <form action="Home/Lista" method="POST">
+                @using (Html.BeginForm("Lista", "Home", FormMethod.Post))
+                {
                     <fildset>
                         <legend>
                             Informações de Pessoas
                         </legend>
                     
-                    <div class="d-flex flex-column w-50">
-                        <label for="PessoaId">Código:</label>
-                        <input type="number"  value="@Model.PessoaId" name="PessoaId">
-                    </div>
-                    <div class="d-flex flex-column w-50">
-                        <label for="PessoaId">Nome:</label>
-                        <input type="text"  value="@Model.PessoaName" name="PessoaName">
-                    </div>
                         <div class="d-flex flex-column w-50">
-                            <label for="PessoaId">Tipo:</label>
-                            <input type="text" value="@Model.PessoaType" name="PessoaType">
+                            <label for="PessoaId">@Html.LabelFor(x => x.PessoaId)</label>
+                            @Html.EditorFor(x => x.PessoaId)
+                        </div>
+                        <div class="d-flex flex-column w-50">
+                            <label for="PessoaId">@Html.LabelFor(x => x.PessoaName)</label>
+                            @Html.EditorFor(x => x.PessoaName)
+                        </div>
+                        <div class="d-flex flex-column w-50">
+                            <label for="PessoaId">@Html.LabelFor(x => x.PessoaType)</label>
+                            @Html.EditorFor(x => x.PessoaType)
                         </div>
                         <input type="submit" value="enviar"/>
                     </fildset>
-                </form>
+                }
+
+                
                 
             </div>
         </div>
