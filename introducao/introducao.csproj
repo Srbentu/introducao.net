@@ -13,4 +13,8 @@
   <ItemGroup>
     <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\Usuario.cshtml" />
+  </ItemGroup>
 </Project>

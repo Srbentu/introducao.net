@@ -4,6 +4,7 @@
     ViewData["Title"] = "MVC";
 }
 
+
 <div class="container">
     <div class="row">
         <div class="col">
@@ -11,14 +12,14 @@
                 <h1 class="display-4">Welcome - Breno</h1>
                 <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
                 <br/>
-                
+
                 @using (Html.BeginForm("Lista", "Home", FormMethod.Post))
                 {
                     <fildset>
                         <legend>
                             Informações de Pessoas
                         </legend>
-                    
+
                         <div class="d-flex flex-column w-50">
                             <label for="PessoaId">@Html.LabelFor(x => x.PessoaId)</label>
                             @Html.EditorFor(x => x.PessoaId)
@@ -35,8 +36,8 @@
                     </fildset>
                 }
 
-                
-                
+
+
             </div>
         </div>
     </div>

@@ -1,0 +1,77 @@
+@using System.ComponentModel.Design
+@model introducao.Models.Usuario;
+
+@{
+    ViewData["Title"] = "Usuário";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Validacao de usuários</h2>
+            @using (Html.BeginForm())
+            {@Html.ValidationSummary(true)
+                <fieldset>
+                    <legend>
+                        Dados do Usuário
+                    </legend>
+                    
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.PessoaName)
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.PessoaName)
+                            @Html.ValidationMessageFor(model => model.PessoaName)
+                        </div>
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Observacoes)
+                        <div class="editor-field">
+                            @Html.TextAreaFor(model => model.Observacoes)
+                            @Html.ValidationMessageFor(model => model.Observacoes)
+                        </div>
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Idade)
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.Idade)
+                            @Html.ValidationMessageFor(model => model.Idade)
+                        </div>
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Email)
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.Email)
+                            @Html.ValidationMessageFor(model => model.Email)
+                        </div>
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Login)
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.Login)
+                            @Html.ValidationMessageFor(model => model.Login)
+                        </div>
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Senha)
+                        <div class="editor-field">
+                            @Html.PasswordFor(model => model.Senha)
+                            @Html.ValidationMessageFor(model => model.Senha)
+                        </div>
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.ConfirmarSenha)
+                        <div class="editor-field">
+                            @Html.PasswordFor(model => model.ConfirmarSenha)
+                            @Html.ValidationMessageFor(model => model.ConfirmarSenha)
+                        </div>
+                    </div>
+                    <p class="mt-3">
+                        <input type="submit" value="cadastrar">
+                    </p>
+                </fieldset>
+            }
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>

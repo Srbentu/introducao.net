@@ -1,0 +1,63 @@
+@model introducao.Models.Usuario;
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Resultado";
+}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2>Usuário</h2>
+            <fieldset>
+                <legend>
+                    Usuário
+                </legend>
+                                
+                <div class="editor-label">
+                    @Html.DisplayNameFor(model => model.PessoaName)
+                </div>
+                <div class="editor-label">
+                    @Html.DisplayFor(model => model.PessoaName)
+                </div>
+                <div class="editor-label">
+                    @Html.DisplayNameFor(model => model.Observacoes)
+                </div>
+                <div class="editor-label">
+                    @Html.DisplayFor(model => model.Observacoes)
+                </div>
+                <div class="editor-label">
+                    @Html.DisplayNameFor(model => model.Idade)
+                </div>
+                <div class="editor-label">
+                    @Html.DisplayFor(model => model.Idade)
+                </div>
+                <div class="editor-label">
+                    @Html.DisplayNameFor(model => model.Email)
+                </div>
+                <div class="editor-label">
+                    @Html.DisplayFor(model => model.Email)
+                </div>
+                <div class="editor-label">
+                    @Html.DisplayNameFor(model => model.Login)
+                </div>
+                <div class="editor-label">
+                    @Html.DisplayFor(model => model.Login)
+                </div>
+                <div class="editor-label">
+                    @Html.DisplayNameFor(model => model.Senha)
+                </div>
+                <div class="editor-label">
+                    @Html.DisplayFor(model => model.Senha)
+                </div>
+                <div class="editor-label">
+                    @Html.DisplayNameFor(model => model.ConfirmarSenha)
+                </div>
+                <div class="editor-label">
+                    @Html.DisplayFor(model => model.ConfirmarSenha)
+                </div>
+                <p class="mt-3">
+                    @Html.ActionLink("voltar", "Usuario")
+                </p>
+            </fieldset>
+        </div>
+    </div>
+</div>
