@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc;
 
 namespace introducao.Models
 {
@@ -12,8 +13,9 @@ namespace introducao.Models
         public int Idade { get; set; }
         [RegularExpression(@"\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*", ErrorMessage = "digite um email válido")]
         public string Email { get; set; }
-        [RegularExpression(@"[a-zA-Z]{5,15}", ErrorMessage="somente letras de 5 a 15 caracteteres")]
+        //[RegularExpression(@"[a-zA-Z]{5,15}", ErrorMessage="somente letras de 5 a 15 caracteteres")]
         [Required]
+        [Remote("LoginUnico", "Usuario", ErrorMessage = "Login já exsite")]
         public string Login { get; set; }
         [Required(ErrorMessage = "Senha Obrigatória")]
         public string Senha { get; set; }
